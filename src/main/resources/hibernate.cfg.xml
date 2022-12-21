@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+<!--        数据源配置-->
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">
+            jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8
+        </property>
+
+        <property name="connection.useUnicode">true</property>
+        <property name="connection.characterEncoding">UTF-8</property>
+        <!--        C3P0-->
+        <property name="hibernate.c3p0.max_size">1</property>
+<!--        数据库方言-->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+<!--        打印SQL-->
+        <property name="show_sql">true</property>
+<!--        格式化sql-->
+        <property name="format_sql">true</property>
+<!--        是否自动生成数据库-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+<!--        <property name="hibernate.hibernate.hbm2ddl.auto">update</property>-->
+
+    </session-factory>
+</hibernate-configuration>
